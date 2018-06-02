@@ -31,7 +31,7 @@ type Client struct {
 	AccessKeySecret string
 }
 
-func New(accessKeyID, accessKeySecret string) *Client {
+func NewClient(accessKeyID, accessKeySecret string) *Client {
 	return &Client{
 		AccessKeyID:     accessKeyID,
 		AccessKeySecret: accessKeySecret,
