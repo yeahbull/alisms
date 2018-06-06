@@ -22,16 +22,16 @@ const (
 	accessKeyID  = ""
 	accessKeySecret  = ""
 	signName = "" // 短信签名
-  templateCode = "" // 短信模板CODE
-  phoneNumbers = "" // 短信接收号码
+	templateCode = "" // 短信模板CODE
+	phoneNumbers = "" // 短信接收号码
 )
 
 func main() {
-  // 实例化阿里云短信服务客户端
+	// 实例化阿里云短信服务客户端
 	c := alisms.NewClient(accessKeyID, accessKeySecret)
   
-  // 发送模板短信
-  _, err := c.SendSMS(phoneNumbers, signName, templateCode, alisms.TemplateParam{"code": "123456"})
+	// 发送模板短信
+	_, err := c.SendSMS(phoneNumbers, signName, templateCode, alisms.TemplateParam{"code": "123456"})
 	if err != nil {
 		log.Fatal(err)
 	}
