@@ -26,6 +26,8 @@ var (
 	specialURLReplacer = strings.NewReplacer("+", "%20", "*", "%2A", "%7E", "~")
 )
 
+type TemplateParam map[string]string
+
 type Client struct {
 	AccessKeyID     string
 	AccessKeySecret string
